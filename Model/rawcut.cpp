@@ -26,6 +26,6 @@ void RawCut::setPiecesNumber(unsigned int pn){
 
 std::string RawCut::toString() const{
 
-    return "Altezza tessuto: " + std::to_string(getFabricHeight()) + ", Numero pezzi: " + std::to_string(getPiecesNumber()) + "\n";
+    return "Altezza tessuto: " + std::to_string(getFabricHeight()) + "cm\nNumero pezzi: " + std::to_string(getPiecesNumber()) + "cm\n";
 
 }

@@ -37,7 +37,7 @@ void MainWindow::addList(QHBoxLayout* mainLayout) {
 
      listwidget = new QListWidget();
 
-     listwidget->setStyleSheet("QListWidget::item { border: 1px solid grey; background-color: #EEEEEE} QListWidget::item::selected { border: 1px solid #333333; background-color: #CCCCCC };");
+     listwidget->setStyleSheet("QListWidget::item { border: 1.5px solid grey; background-color: #EEEEEE} QListWidget::item::selected { border: 1.5px solid #333333; background-color: #CCCCCC };");
 
      listwidget->setSpacing(3);
 
@@ -90,7 +90,8 @@ void MainWindow::updateView(){
 
         DeepPtr<RawCut> a = *it;
 
-        listwidget->addItem(QString::fromStdString(a->toString()) + "\nCONSUMO: " + QString::number(a->getConsumption())); //TODO: formattare meglio la stringa visualizzata.
+        //tostring dei tagli
+        listwidget->addItem(QString::fromStdString(a->toString()) + "CONSUMO CALCOLATO: " + QString::number(a->getConsumption()) + "cm");
 
     }
 

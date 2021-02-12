@@ -1,6 +1,6 @@
 #include "rectanglecut.h"
 
-RectangleCut::RectangleCut(unsigned int fabric_height, unsigned int n_pieces, unsigned int piece_lenght, unsigned int piece_height)
+RectangleCut::RectangleCut(unsigned int fabric_height, unsigned int n_pieces, unsigned int piece_height, unsigned int piece_lenght)
     : RawCut(fabric_height, n_pieces), piece_height(piece_height), piece_lenght(piece_lenght) { }
 
 unsigned int RectangleCut::getPieceLenght() const {
@@ -42,6 +42,6 @@ unsigned int RectangleCut::getConsumption() const {
 
 std::string RectangleCut::toString() const{
 
-    return RawCut::toString() + "Misure pezzo: " + std::to_string(getPieceLenght()) + "x" + std::to_string(getPieceHeight());
+    return RawCut::toString() + "Misure pezzo: " + std::to_string(getPieceLenght()) + "cm X " + std::to_string(getPieceHeight()) + "cm\n";
 
 }

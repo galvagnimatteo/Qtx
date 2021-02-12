@@ -48,7 +48,7 @@ CollarCut* CollarCut::clone() const{
 
 std::string CollarCut::toString() const{
 
-    return RectangleCut::toString() + "(Larghezza colletti: " + std::to_string(getCollarWidth()) + " Raggio colletti: " + std::to_string(getCollarRadius()) + " Scarto: " + std::to_string(getWaste());
+    return RectangleCut::toString() + "Larghezza colletti: " + std::to_string(getCollarWidth()) + "cm, Raggio colletti: " + std::to_string(getCollarRadius()) + "cm, Scarto: " + std::to_string(getWaste()) + "cm\n";
 
 }
 

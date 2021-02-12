@@ -45,6 +45,6 @@ unsigned int ObliqueCut::getConsumption() const {
 
 std::string ObliqueCut::toString() const{
 
-    return RectangleCut::toString() + "Inclinazione: " + std::to_string(getAngle());
+    return RectangleCut::toString() + "Inclinazione: " + std::to_string(getAngle()) + "°\n";
 
 }
