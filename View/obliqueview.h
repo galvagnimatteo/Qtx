@@ -52,11 +52,6 @@ public slots:
     void addOrModifyObliqueCut();
     void updateFields(int);
 
-signals:
-
-    void addObliqueCutSignal(QString, QString, QString, QString, unsigned int);
-    void modifyObliqueCutSignal(int, QString, QString, QString, QString, unsigned int);
-
 };
 
 #endif

@@ -101,11 +101,11 @@ void ObliqueView::addOrModifyObliqueCut(){
 
     if(calcolate->text() == QString::fromStdString("Modifica")){
 
-        emit modifyObliqueCutSignal(index, fabric_height->text(), n_pieces->text(), piece_height->text(), piece_lenght->text(), angle);
+        getController()->modifyObliqueCut(index, fabric_height->text(), n_pieces->text(), piece_height->text(), piece_lenght->text(), angle);
 
     }else{
 
-        emit addObliqueCutSignal(fabric_height->text(), n_pieces->text(), piece_height->text(), piece_lenght->text(), angle);
+        getController()->addObliqueCut(fabric_height->text(), n_pieces->text(), piece_height->text(), piece_lenght->text(), angle);
 
     }
 

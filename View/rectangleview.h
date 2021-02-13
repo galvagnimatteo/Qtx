@@ -37,11 +37,6 @@ public slots:
     void addOrModifyRectangleCut();
     void updateFields(int);
 
-signals:
-
-    void addRectangleCutSignal(QString, QString, QString, QString);
-    void modifyRectangleCutSignal(int, QString, QString, QString, QString);
-
 };
 
 #endif

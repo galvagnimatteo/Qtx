@@ -39,17 +39,16 @@ public:
 
     RectangleWindowController* getController() const override;
 
-    void changeLayout(View*);
-
     void setRectangleButtonSelected();
     void setObliqueButtonSelected();
     void setCollarButtonSelected();
     void disableRadioGroup();
-
-signals:
-
     void lockViewSignal();
     void unlockViewSignal();
+
+public slots:
+
+    void changeLayout(View*);
 
 };
 

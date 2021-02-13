@@ -102,12 +102,11 @@ void MainWindow::modifySelectedCut(){
 
     if(listwidget->selectionModel()->selectedIndexes().size() == 1){
 
-        emit modifySelectedCutSignal(listwidget->selectionModel()->selectedIndexes()[0].row()); //appurato che sia selezionato un solo item nella listwidget, viene emesso il segnale con l'indice intero
-                                                                                                //che sarà in posizione 0 della lista degli indici fornita da selectedindexes().
+        getController()->openModifyView(listwidget->selectionModel()->selectedIndexes()[0].row());
 
     }else{
 
-        emit modifySelectedCutSignal(-1);
+        getController()->openModifyView(-1);
 
     }
 
@@ -117,11 +116,11 @@ void MainWindow::deleteSelectedCut(){
 
     if(listwidget->selectionModel()->selectedIndexes().size() == 1){
 
-        emit deleteSelectedCutSignal(listwidget->selectionModel()->selectedIndexes()[0].row());
+        getController()->deleteSelectedCut(listwidget->selectionModel()->selectedIndexes()[0].row());
 
     }else{
 
-        emit deleteSelectedCutSignal(-1);
+        getController()->deleteSelectedCut(-1);
 
     }
 

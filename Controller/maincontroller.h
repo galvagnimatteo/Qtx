@@ -18,12 +18,12 @@ public:
     MainController(View*, MainModel* m);
 
     C<DeepPtr<RawCut>> getAllCuts() const;
+    void openModifyView(int);
+    void deleteSelectedCut(int);
 
 public slots:
 
     void openRectangleWindow();
-    void openModifyView(int);
-    void deleteSelectedCut(int);
 
 };
 

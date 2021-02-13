@@ -19,9 +19,6 @@ public:
     void updateFields(int);
 
     const DeepPtr<CollarCut> getCutByIndex(int);
-
-public slots:
-
     void addCollarCut(QString, QString, QString, QString, QString);
     void modifyCollarCut(int, QString, QString, QString, QString, QString);
 

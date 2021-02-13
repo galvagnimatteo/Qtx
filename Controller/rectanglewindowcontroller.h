@@ -19,9 +19,9 @@ public:
 
 public slots:
 
-    void openObliqueLayout(int index = -1) const;
-    void openRectangleLayout(int index = -1) const;
-    void openCollarLayout(int index = -1) const;
+    void openObliqueLayout(int index = -1);
+    void openRectangleLayout(int index = -1);
+    void openCollarLayout(int index = -1);
 
     void emitLockViewSignal();
     void emitUnlockViewSignal();
@@ -30,6 +30,7 @@ signals:
 
     void lockViewSignal();
     void unlockViewSignal();
+    void changeLayoutSignal(View*);
 
 };
 

@@ -46,11 +46,6 @@ public slots:
     void updateFields(int);
     void updatePieceMeasures(unsigned int, unsigned int);
 
-signals:
-
-    void addCollarCutSignal(QString, QString, QString, QString, QString);
-    void modifyCollarCutSignal(int, QString, QString, QString, QString, QString);
-
 };
 
 #endif

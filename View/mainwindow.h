@@ -38,6 +38,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
 
     MainController* getController() const override;
+    void modifySelectedCutSignal(int);
+    void deleteSelectedCutSignal(int);
 
 public slots:
 
@@ -46,11 +48,6 @@ public slots:
     void deleteSelectedCut();
     void lockView();
     void unlockView();
-
-signals:
-
-    void modifySelectedCutSignal(int);
-    void deleteSelectedCutSignal(int);
 
 };
 

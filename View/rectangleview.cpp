@@ -60,11 +60,11 @@ void RectangleView::addOrModifyRectangleCut(){
 
     if(calcolate->text() == QString::fromStdString("Modifica")){
 
-        emit modifyRectangleCutSignal(index, fabric_height->text(), n_pieces->text(), piece_height->text(), piece_lenght->text());
+        getController()->modifyRectangleCut(index, fabric_height->text(), n_pieces->text(), piece_height->text(), piece_lenght->text());
 
     }else{
 
-        emit addRectangleCutSignal(fabric_height->text(), n_pieces->text(), piece_height->text(), piece_lenght->text()); //emette il segnale per il controller, utile per passare parametri al controller
+        getController()->addRectangleCut(fabric_height->text(), n_pieces->text(), piece_height->text(), piece_lenght->text());
 
     }
 

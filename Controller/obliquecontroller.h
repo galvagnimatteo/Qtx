@@ -19,9 +19,6 @@ public:
     void updateFields(int);
 
     const DeepPtr<ObliqueCut> getCutByIndex(int);
-
-public slots:
-
     void addObliqueCut(QString, QString, QString, QString, unsigned int);
     void modifyObliqueCut(int, QString, QString, QString, QString, unsigned int);
 

@@ -5,12 +5,8 @@
 
 RectangleController::RectangleController(View* v, MainModel* m) : Controller(v, m){
 
-    connect(getView(), SIGNAL(addRectangleCutSignal(QString, QString, QString, QString)),
-            this, SLOT(addRectangleCut(QString, QString, QString, QString))); //quando riceve il segnale emesso dalla view quando viene premuto "calcola", esegue addRectangleCut di RectangleController
-
-    connect(getView(), SIGNAL(modifyRectangleCutSignal(int, QString, QString, QString, QString)), this, SLOT(modifyRectangleCut(int,QString,QString,QString,QString)));
-
     connect(this, SIGNAL(updateFieldsSignal(int)), getView(), SLOT(updateFields(int)));
+
 }
 
 void RectangleController::addRectangleCut(QString fabric_height, QString n_pieces, QString piece_height, QString piece_width){

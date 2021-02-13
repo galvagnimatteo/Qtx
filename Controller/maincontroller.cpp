@@ -10,8 +10,6 @@
 MainController::MainController(View* v, MainModel* m) : Controller(v, m){
 
     connect(getModel(), SIGNAL(modelUpdated()), getView(), SLOT(updateView())); //quando il controller riceve il segnale modelupdated chiama lo slot relativo nella view
-    connect(getView(), SIGNAL(modifySelectedCutSignal(int)), this, SLOT(openModifyView(int)));
-    connect(getView(), SIGNAL(deleteSelectedCutSignal(int)), this, SLOT(deleteSelectedCut(int)));
 
 }
 

@@ -20,7 +20,7 @@ RectangleWindow::RectangleWindow(QWidget *parent) : View(parent){ //APPUNTI: ove
 void RectangleWindow::closeEvent(QCloseEvent *event){
 
     //sblocca mainview
-    emit unlockViewSignal();
+    getController()->emitUnlockViewSignal();
 
     event->accept();
 
@@ -29,7 +29,7 @@ void RectangleWindow::closeEvent(QCloseEvent *event){
 void RectangleWindow::showEvent(QShowEvent *event){
 
     //blocca mainview
-    emit lockViewSignal();
+    getController()->emitLockViewSignal();
 
     event->accept();
 
@@ -65,8 +65,7 @@ RectangleWindowController* RectangleWindow::createController(MainModel* m){
     connect(oblique, SIGNAL(clicked(bool)), rwc, SLOT(openObliqueLayout()));
     connect(collar, SIGNAL(clicked(bool)), rwc, SLOT(openCollarLayout()));
 
-    connect(this, SIGNAL(lockViewSignal()), rwc, SLOT(emitLockViewSignal()));
-    connect(this, SIGNAL(unlockViewSignal()), rwc, SLOT(emitUnlockViewSignal()));
+    connect(rwc, SIGNAL(changeLayoutSignal(View*)), this, SLOT(changeLayout(View*)));
 
     return rwc;
 
@@ -74,7 +73,7 @@ RectangleWindowController* RectangleWindow::createController(MainModel* m){
 
 RectangleWindowController* RectangleWindow::getController() const{
 
-    return dynamic_cast<RectangleWindowController*> (View::getController()); //uso il getcontroller di view
+    return dynamic_cast<RectangleWindowController*> (View::getController());
 
 }
 

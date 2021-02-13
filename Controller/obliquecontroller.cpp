@@ -5,11 +5,6 @@
 
 ObliqueController::ObliqueController(View* v, MainModel* m) : Controller(v, m){
 
-    connect(getView(), SIGNAL(addObliqueCutSignal(QString, QString, QString, QString, unsigned int)),
-            this, SLOT(addObliqueCut(QString, QString, QString, QString, unsigned int)));
-
-    connect(getView(), SIGNAL(modifyObliqueCutSignal(int, QString, QString, QString, QString, unsigned int)), this, SLOT(modifyObliqueCut(int,QString,QString,QString,QString, unsigned int)));
-
     connect(this, SIGNAL(updateFieldsSignal(int)), getView(), SLOT(updateFields(int)));
 
 }

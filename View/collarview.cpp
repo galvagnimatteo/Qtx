@@ -91,11 +91,11 @@ void CollarView::addOrModifyCollarCut(){
 
     if(calcolate->text() == QString::fromStdString("Modifica")){
 
-        emit modifyCollarCutSignal(index, fabric_height->text(), n_pieces->text(), collar_width->text(), collar_radius->text(), collar_waste->text());
+        getController()->modifyCollarCut(index, fabric_height->text(), n_pieces->text(), collar_width->text(), collar_radius->text(), collar_waste->text());
 
     }else{
 
-        emit addCollarCutSignal(fabric_height->text(), n_pieces->text(), collar_width->text(), collar_radius->text(), collar_waste->text()); //emette il segnale per il controller, utile per passare parametri al controller
+        getController()->addCollarCut(fabric_height->text(), n_pieces->text(), collar_width->text(), collar_radius->text(), collar_waste->text()); //emette il segnale per il controller, utile per passare parametri al controller
 
     }
 

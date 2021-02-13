@@ -5,11 +5,7 @@
 
 CollarController::CollarController(View* v, MainModel* m) : Controller(v, m){
 
-    connect(getView(), SIGNAL(addCollarCutSignal(QString, QString, QString, QString, QString)),
-            this, SLOT(addCollarCut(QString, QString, QString, QString, QString)));
-
     connect(this, SIGNAL(updateFieldsSignal(int)), getView(), SLOT(updateFields(int)));
-    connect(getView(), SIGNAL(modifyCollarCutSignal(int, QString, QString, QString, QString, QString)), this, SLOT(modifyCollarCut(int, QString, QString, QString, QString, QString)));
     connect(this, SIGNAL(updatePieceMeasuresSignal(unsigned int, unsigned int)), getView(), SLOT(updatePieceMeasures(unsigned int, unsigned int)));
 
 }
