@@ -28,7 +28,7 @@ void ObliqueController::addObliqueCut(QString fabric_height, QString n_pieces, Q
     bool piece_width_check;
     unsigned int casted_piece_width = piece_width.toInt(&piece_width_check);
 
-    if(fabric_height_check && n_pieces_check && piece_height_check && piece_width_check){
+    if(fabric_height_check && n_pieces_check && piece_height_check && piece_width_check  && casted_piece_height > 0 && casted_piece_width > 0){
 
         if(casted_fabric_height > RawCut::MAX_FABRIC_HEIGHT || casted_fabric_height < RawCut::MIN_FABRIC_HEIGHT){
 
@@ -72,7 +72,7 @@ void ObliqueController::modifyObliqueCut(int index, QString fabric_height, QStri
     bool piece_width_check;
     unsigned int casted_piece_width = piece_width.toInt(&piece_width_check);
 
-    if(fabric_height_check && n_pieces_check && piece_height_check && piece_width_check){
+    if(fabric_height_check && n_pieces_check && piece_height_check && piece_width_check  && casted_piece_height > 0 && casted_piece_width > 0){
 
         if(casted_fabric_height > RawCut::MAX_FABRIC_HEIGHT || casted_fabric_height < RawCut::MIN_FABRIC_HEIGHT){
 
