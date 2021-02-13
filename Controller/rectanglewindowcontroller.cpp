@@ -1,7 +1,6 @@
 #include "Controller/rectanglewindowcontroller.h"
 #include "View/rectanglewindow.h"
 
-#include <iostream>
 RectangleWindowController::RectangleWindowController(View* v, MainModel* m) : Controller(v, m){ }
 
 void RectangleWindowController::openObliqueLayout(int index){

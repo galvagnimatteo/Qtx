@@ -1,7 +1,4 @@
 #include "Controller/maincontroller.h"
-//maincontroller.h ha già inclusa mainwindow.h quindi non serve aggiungerla qui, mentre
-//mainwindow.h non include MainController.h per non essere circolare e invece dichiara la classe MainController incompleta
-
 #include "View/rectanglewindow.h"
 #include "Controller/rectanglewindowcontroller.h"
 

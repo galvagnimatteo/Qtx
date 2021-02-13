@@ -1,6 +1,4 @@
 #include "rectanglecontroller.h"
-#include "View/rectangleview.h"
-
 #include <QMessageBox>
 
 RectangleController::RectangleController(View* v, MainModel* m) : Controller(v, m){
