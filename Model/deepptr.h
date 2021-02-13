@@ -32,6 +32,10 @@ public:
     const T* operator->() const;
     T* operator->();
 
+    //Operatore indirizzo
+    const T* operator&() const;
+    T* operator&();
+
     //Operatori uguale e diverso
     bool operator==(const DeepPtr&) const;
     bool operator!=(const DeepPtr&) const;
@@ -105,6 +109,19 @@ const T* DeepPtr<T>::operator->() const{
 
 template <class T>
 T* DeepPtr<T>::operator->(){
+  return pointer;
+}
+
+//Operatore indirizzo e ind. const
+//Viene ritornato il puntatore all'oggetto T, coerentemente con il desiderabile risultato
+//di avere un deepptr<T> comportarsi quanto più similmente a un puntatore a T.
+template <class T>
+const T* DeepPtr<T>::operator&() const{
+  return const_cast<const T * const>(pointer);
+}
+
+template <class T>
+T* DeepPtr<T>::operator&(){
   return pointer;
 }
 

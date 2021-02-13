@@ -41,7 +41,7 @@ void MainModel::modifyRectangleCut(int index, unsigned int fabric_height, unsign
 
     }
 
-    rc = dynamic_cast<RectangleCut*> (&**it); //indirizzo di **it che è rawcut (rectanglecut dinamicamente) perchè *it è deepptr<rawcut>
+    rc = dynamic_cast<RectangleCut*> (&*it); //indirizzo di **it che è rawcut (rectanglecut dinamicamente) perchè *it è deepptr<rawcut>
 
     rc->setFabricHeight(fabric_height);
     rc->setPieceHeight(piece_height);
@@ -64,7 +64,7 @@ void MainModel::modifyObliqueCut(int index, unsigned int fabric_height, unsigned
 
     }
 
-    oc = dynamic_cast<ObliqueCut*> (&**it);
+    oc = dynamic_cast<ObliqueCut*> (&*it);
 
     oc->setFabricHeight(fabric_height);
     oc->setPieceHeight(piece_height);
@@ -88,7 +88,7 @@ void MainModel::modifyCollarCut(int index, unsigned int fabric_height, unsigned 
 
     }
 
-    cc = dynamic_cast<CollarCut*> (&**it);
+    cc = dynamic_cast<CollarCut*> (&*it);
 
     cc->setFabricHeight(fabric_height);
     cc->setPiecesNumber(n_pieces);
