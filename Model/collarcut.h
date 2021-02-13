@@ -19,6 +19,8 @@ public:
     static const unsigned int MIN_COLLAR_RADIUS;
     static const unsigned int MIN_COLLAR_WIDTH;
 
+    static const unsigned int MIN_COLLAR_WASTE;
+
     CollarCut(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
 
     static unsigned int computePieceLenght(unsigned int, unsigned int, unsigned int);

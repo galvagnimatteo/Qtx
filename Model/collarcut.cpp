@@ -10,6 +10,8 @@ const unsigned int CollarCut::MAX_COLLAR_RADIUS = 30;
 const unsigned int CollarCut::MIN_COLLAR_RADIUS = 10;
 const unsigned int CollarCut::MIN_COLLAR_WIDTH = 1;
 
+const unsigned int CollarCut::MIN_COLLAR_WASTE = 1;
+
 unsigned int CollarCut::computePieceLenght(unsigned int c_width, unsigned int c_radius, unsigned int w){
     return w + c_radius + (c_width * 2);
 }

@@ -45,7 +45,7 @@ void CollarController::addCollarCut(QString fabric_height, QString n_pieces, QSt
 
             QMessageBox::critical(getView(), "Errore!", "Il pezzo generato è più alto del tessuto.");
 
-        }else if(casted_collar_radius > CollarCut::MAX_COLLAR_RADIUS || casted_collar_radius < CollarCut::MIN_COLLAR_RADIUS || casted_collar_width < CollarCut::MIN_COLLAR_WIDTH || casted_collar_width > CollarCut::MAX_COLLAR_WIDTH){
+        }else if(casted_collar_radius > CollarCut::MAX_COLLAR_RADIUS || casted_collar_radius < CollarCut::MIN_COLLAR_RADIUS || casted_collar_width < CollarCut::MIN_COLLAR_WIDTH || casted_collar_width > CollarCut::MAX_COLLAR_WIDTH || casted_waste < CollarCut::MIN_COLLAR_WASTE){
 
             QMessageBox::critical(getView(), "Errore!", "Misure del colletto non standard.");
 
