@@ -1,5 +1,4 @@
 #include "Controller/rectanglewindowcontroller.h"
-#include "View/rectanglewindow.h"
 
 RectangleWindowController::RectangleWindowController(View* v, MainModel* m) : Controller(v, m){ }
 

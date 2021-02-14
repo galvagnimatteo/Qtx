@@ -10,7 +10,6 @@
 #include <QCloseEvent>
 
 #include "Controller/maincontroller.h"
-#include "view.h"
 
 class MainWindow: public View{
 

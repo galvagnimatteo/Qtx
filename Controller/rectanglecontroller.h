@@ -2,11 +2,10 @@
 #define RECTANGLECONTROLLER_H
 
 #include <QObject>
+#include <QMessageBox>
 
 #include "Model/rectanglecut.h"
 #include "controller.h"
-
-class RectangleView;
 
 class RectangleController: public Controller {
 
@@ -14,7 +13,7 @@ class RectangleController: public Controller {
 
 public:
 
-    RectangleController(View* v, MainModel* m);
+    RectangleController(View* v, MainModel* m); //non posso passare una rectangleview dichiarata in modo incompleto perchè non include l'informazione che deriva da View
 
     void updateFields(int);
 

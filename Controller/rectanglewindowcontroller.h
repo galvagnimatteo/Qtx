@@ -6,8 +6,10 @@
 #include "Model/collarcut.h"
 #include "Model/rectanglecut.h"
 #include "controller.h"
-
-class RectangleWindow;
+#include "View/collarview.h"
+#include "View/obliqueview.h"
+#include "View/rectangleview.h"
+#include "View/view.h"
 
 class RectangleWindowController : public Controller {
 

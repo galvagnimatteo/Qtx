@@ -6,8 +6,6 @@
 #include <QLineEdit>
 
 #include "Controller/rectanglecontroller.h"
-#include "rectanglewindow.h"
-#include "View/view.h"
 
 class RectangleView: public View{
 

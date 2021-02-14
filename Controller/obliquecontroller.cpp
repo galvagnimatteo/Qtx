@@ -1,7 +1,4 @@
 #include "obliquecontroller.h"
-#include "View/obliqueview.h"
-
-#include <QMessageBox>
 
 ObliqueController::ObliqueController(View* v, MainModel* m) : Controller(v, m){
 
@@ -103,7 +100,6 @@ void ObliqueController::updateFields(int index){
 
 const DeepPtr<ObliqueCut> ObliqueController::getCutByIndex(int index){
 
-    const DeepPtr<RawCut> dptr = getModel()->getCutByIndex(index);
-    return dynamic_cast<const ObliqueCut*>(&*dptr);
+    return dynamic_cast<const ObliqueCut*>(&getModel()->getCutByIndex(index));
 
 }

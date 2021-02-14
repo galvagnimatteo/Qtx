@@ -4,10 +4,8 @@
 #include <QObject>
 
 #include "Model/mainmodel.h"
-#include "Model/rectanglecut.h"
 #include "controller.h"
-
-class MainWindow;
+#include "View/view.h"
 
 class MainController : public Controller {
 

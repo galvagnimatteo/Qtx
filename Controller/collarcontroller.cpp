@@ -1,7 +1,4 @@
 #include "collarcontroller.h"
-#include "View/collarview.h"
-
-#include <QMessageBox>
 
 CollarController::CollarController(View* v, MainModel* m) : Controller(v, m){
 
@@ -122,7 +119,6 @@ void CollarController::updateFields(int index){
 
 const DeepPtr<CollarCut> CollarController::getCutByIndex(int index){
 
-    const DeepPtr<RawCut> dptr = getModel()->getCutByIndex(index);
-    return dynamic_cast<const CollarCut*>(&*dptr);
+    return dynamic_cast<const CollarCut*>(&getModel()->getCutByIndex(index));
 
 }

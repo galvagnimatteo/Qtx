@@ -6,7 +6,6 @@
 #include <QLineEdit>
 
 #include "Controller/collarcontroller.h"
-#include "view.h"
 
 class CollarView: public View{
 

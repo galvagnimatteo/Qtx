@@ -1,9 +1,6 @@
 #include "rectanglewindow.h"
-#include "Controller/rectanglecontroller.h"
-#include "Controller/obliquecontroller.h"
-#include "Controller/collarcontroller.h"
 
-RectangleWindow::RectangleWindow(QWidget *parent) : View(parent){ //APPUNTI: override metodo show per mandare il segnale?
+RectangleWindow::RectangleWindow(QWidget *parent) : View(parent){
 
     setAttribute(Qt::WA_DeleteOnClose);
 

@@ -2,11 +2,10 @@
 #define COLLARCONTROLLER_H
 
 #include <QObject>
+#include <QMessageBox>
 
 #include "Model/collarcut.h"
 #include "controller.h"
-
-class CollarView;
 
 class CollarController: public Controller {
 

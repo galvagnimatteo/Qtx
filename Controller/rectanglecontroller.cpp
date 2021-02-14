@@ -1,7 +1,6 @@
 #include "rectanglecontroller.h"
-#include <QMessageBox>
 
-RectangleController::RectangleController(View* v, MainModel* m) : Controller(v, m){
+RectangleController::RectangleController(View* v, MainModel* m) : Controller(v, m){ //usa costruttore di controller che chiede una view*
 
     connect(this, SIGNAL(updateFieldsSignal(int)), getView(), SLOT(updateFields(int)));
 
@@ -101,7 +100,6 @@ void RectangleController::updateFields(int index){
 
 const DeepPtr<RectangleCut> RectangleController::getCutByIndex(int index){
 
-    const DeepPtr<RawCut> dptr = getModel()->getCutByIndex(index);
-    return dynamic_cast<const RectangleCut*>(&*dptr);
+    return dynamic_cast<const RectangleCut*>(&getModel()->getCutByIndex(index));
 
 }

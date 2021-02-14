@@ -5,8 +5,7 @@
 
 #include "Model/obliquecut.h"
 #include "controller.h"
-
-class ObliqueView;
+#include <QMessageBox>
 
 class ObliqueController: public Controller {
 

@@ -4,10 +4,6 @@
 #include <QGroupBox>
 #include <QRadioButton>
 #include <QHBoxLayout>
-
-#include "View/obliqueview.h"
-#include "View/collarview.h"
-#include "View/rectangleview.h"
 #include <QCloseEvent>
 
 #include "Controller/rectanglewindowcontroller.h"

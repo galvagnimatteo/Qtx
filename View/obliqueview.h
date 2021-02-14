@@ -7,9 +7,7 @@
 #include <QGroupBox>
 #include <QRadioButton>
 
-#include "rectanglewindow.h"
 #include "Controller/obliquecontroller.h"
-#include "view.h"
 
 class ObliqueView: public View{
 
